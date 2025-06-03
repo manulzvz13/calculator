@@ -39,7 +39,6 @@ function operate (symbol, itemOne, itemTwo) {
     }
 };
 
-alert(operate('*',1,4));
 
 
 
