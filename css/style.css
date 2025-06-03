@@ -1,0 +1,17 @@
+#calculator {
+    display: flexbox;
+}
+
+#display {
+    display: flexbox;
+}
+
+#interface {
+    background-color: gray;
+    height: 100px;
+    width: 900px;
+}
+
+#keys-section {
+
+}
