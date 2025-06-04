@@ -23,6 +23,8 @@ function divide(numOne, numTwo) {
 // Function to make the different basic math functions with variables above
 
 function operate (symbol, itemOne, itemTwo) {
+    itemOne = Number(itemOne); // Ensure numbers for calculations
+    itemTwo = Number(itemTwo); // Ensure numbers for calculations
     switch (symbol) {
         case '+':
             return add(itemOne, itemTwo);
@@ -38,6 +40,8 @@ function operate (symbol, itemOne, itemTwo) {
             return undefined;
     }
 };
+
+// Functions to populate the display when you click the digit buttons
 
 
 
