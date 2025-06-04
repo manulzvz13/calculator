@@ -1,17 +1,88 @@
+
+/* Calculator Container */
 #calculator {
-    display: flexbox;
+  display: flex; /* Make the calculator container a flex container */
+  flex-direction: column; /* Stack display and keys-section vertically */
+  width: 302px; /* Example fixed width for the calculator */
+  margin: 50px auto; /* Center the calculator on the page */
+  border: 1px solid #999; /* Outer border for the entire calculator */
+  border-radius: 8px;
+  overflow: hidden; /* Important for clean rounded corners if inner elements spill */
+  background-color: #999; /* This color will show through the gaps */
 }
 
+/* Display Section */
 #display {
-    display: flexbox;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  min-height: 100px; /* Adjust as needed */
+  display: flex; /* Use flexbox for display content */
+  align-items: center; /* Vertically center the text */
+  justify-content: flex-end; /* Align text to the right */
+  word-wrap: break-word; /* Important for long numbers */
+  word-break: break-all; /* Break words anywhere if they're too long */
 }
 
 #interface {
-    background-color: gray;
-    height: 100px;
-    width: 900px;
+  font-size: 2.2em; /* Adjust font size for display */
+  margin: 0; /* Ensure no margin from the <p> tag within display */
 }
 
+/* Keys Section (Button Grid) */
 #keys-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px; /* 1px gap between items */
+  background-color: transparent;
+}
 
+#keys-section button {
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74.25px; /* (300px - 3px gap) / 4 columns = 74.25px per "slot" */
+}
+
+/* Specific button styling (operators) */
+#plus,
+#minus,
+#product,
+#division,
+#equal {
+  background-color: #ff9900;
+  color: white;
+}
+
+#plus:hover,
+#minus:hover,
+#product:hover,
+#division:hover,
+#equal:hover {
+  background-color: #e68a00;
+}
+
+/* AC button - span two columns */
+#clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+#equal {
+  color: white;
+  /* Calculate width for 4 columns, including the gap BETWEEN those four "slots" */
+  flex-basis: 301px; /* (4 * 74.25px slot width) + 3px gap = 300px + 1px = 301px */
+}
+
+#clear:hover {
+  background-color: #c82333;
 }
