@@ -1,15 +1,15 @@
 // Basic math operator functions
 
-function add (numOne, numTwo) {
-    return numOne + numTwo;
-};
-
-function subtract (numOne, numTwo) {
-    return numOne - numTwo;
+function add(numOne, numTwo) {
+  return numOne + numTwo;
 }
 
-function multiply (numOne, numTwo) {
-    return numOne * numTwo;
+function subtract(numOne, numTwo) {
+  return numOne - numTwo;
+}
+
+function multiply(numOne, numTwo) {
+  return numOne * numTwo;
 }
 
 function divide(numOne, numTwo) {
@@ -22,28 +22,35 @@ function divide(numOne, numTwo) {
 
 // Function to make the different basic math functions with variables above
 
-function operate (symbol, itemOne, itemTwo) {
-    itemOne = Number(itemOne); // Ensure numbers for calculations
-    itemTwo = Number(itemTwo); // Ensure numbers for calculations
-    switch (symbol) {
-        case '+':
-            return add(itemOne, itemTwo);
-        case '-':
-            return subtract(itemOne, itemTwo);
-        case '*':
-            return multiply(itemOne, itemTwo);
-        case '/':
-            return divide(itemOne, itemTwo);
-            
-        default:
-            alert('Please input a valid operation (+-*/)');
-            return undefined;
-    }
-};
+function operate(symbol, itemOne, itemTwo) {
+  itemOne = Number(itemOne); // Ensure numbers for calculations
+  itemTwo = Number(itemTwo); // Ensure numbers for calculations
+  switch (symbol) {
+    case "+":
+      return add(itemOne, itemTwo);
+    case "-":
+      return subtract(itemOne, itemTwo);
+    case "*":
+      return multiply(itemOne, itemTwo);
+    case "/":
+      return divide(itemOne, itemTwo);
+
+    default:
+      alert("Please input a valid operation (+-*/)");
+      return undefined;
+  }
+}
 
 // Functions to populate the display when you click the digit buttons
 
-
-
-
-
+// Get DOM elements
+const displayInterface = document.querySelector("interface");
+const digitButtons = document.querySelectorAll(
+  "#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #cero"
+);
+const dotButton = document.getElementById("dot");
+const clearButton = document.getElementById("clear");
+const operatorButtons = document.querySelectorAll(
+  "#plus, #minus, #product, #division"
+);
+const equalButton = document.getElementById("equal");
